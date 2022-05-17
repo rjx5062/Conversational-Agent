@@ -27,6 +27,7 @@ The Schema-Guided Dialogue (SGD) dataset consists of over 20k annotated multi-do
 -> New decoding method (Top-K) and new metrics (BERTScore and ROUGE)
 
 
+
 **The various Approaches Implemented:**
 
 _Different Models_
@@ -51,6 +52,7 @@ For this experiment : p = 0.90.
 Expanding the highest probability beam by keeping the number of beams constant in each timestep.
 For this experiment : # of beams = 5.
 
+
 _Varying Evaluation Metric_
 
 -> BLEU Score
@@ -61,6 +63,7 @@ Leverages the pre-trained contextual embeddings from BERT and matches words in c
 
 -> ROUGE Score
 Evaluation of automatic summarization and machine translation software
+
 
 _Supplementing Fine-Tuning Data_
 
