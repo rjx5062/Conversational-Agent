@@ -18,57 +18,57 @@ The Schema-Guided Dialogue (SGD) dataset consists of over 20k annotated multi-do
 
 **Changes made to codebase:**
 
-Fine-tuning script modification
+-> Fine-tuning script modification
 
-File directory structure
+-> File directory structure
 
-Automated evaluation loop
+-> Automated evaluation loop
 
-New decoding method (Top-K) and new metrics (BERTScore and ROUGE)
+-> New decoding method (Top-K) and new metrics (BERTScore and ROUGE)
 
 
 **The various Approaches Implemented:**
 
 _Different Models_
 
-The first approach was to compare pre-trained GPT vs. GPT2 models’ zero-shot performance as well as the fine tune performance.
+-> The first approach was to compare pre-trained GPT vs. GPT2 models’ zero-shot performance as well as the fine tune performance.
 
 
 _Varying Decoding Techniques_
 
-Greedy Decoding
+-> Greedy Decoding
 Selection of word with highest probability
 
-Top-K
+-> Top-K
 Redistribution of probability mass over K most likely next words. 
 For this experiment : k = 5.
 
-Top-P
+-> Top-P
 Shortlisting smallest number of top tokens with sum of probabilities exceeding p.
 For this experiment : p = 0.90.
 
-Beam Search
+-> Beam Search
 Expanding the highest probability beam by keeping the number of beams constant in each timestep.
 For this experiment : # of beams = 5.
 
 _Varying Evaluation Metric_
 
-BLEU Score
+-> BLEU Score
 Evaluation of quality of machine translated text with natural language text.
 
-BERTScore
+-> BERTScore
 Leverages the pre-trained contextual embeddings from BERT and matches words in candidate and reference texts by cosine similarity. 
 
-ROUGE Score
+-> ROUGE Score
 Evaluation of automatic summarization and machine translation software
 
 _Supplementing Fine-Tuning Data_
 
-Original Goal: 
+-> Original Goal: 
 Fine-tune on large general purpose conversational dataset
 Fine-tune again on the MultiWoz dataset
 
-Completed Goal:
+-> Completed Goal:
 Combined SGD training dataset with the MultiWoz training dataset
 Fine-tuned on combined (supplemented) dataset
 
